@@ -1,0 +1,316 @@
+{
+  "frozen_manifest_sha256": "7910a7b96738cbcb9bfd80abfba5f2f09dcf20eb11f2e82df1823e416e169660",
+  "frozen_files_checked": 48,
+  "hash_checks": [
+    {
+      "file": "README.md",
+      "expected": "6046bd40117ba2c1489d42a6deb72d7215e4c5c0ce05eb288fca513105ff986c",
+      "actual": "6046bd40117ba2c1489d42a6deb72d7215e4c5c0ce05eb288fca513105ff986c",
+      "match": true
+    },
+    {
+      "file": "commissioning_measurements.json",
+      "expected": "9aa421f6167083a0d9fd0a80471de6c0da05f28cf47e384d3e2a96badcd047f8",
+      "actual": "9aa421f6167083a0d9fd0a80471de6c0da05f28cf47e384d3e2a96badcd047f8",
+      "match": true
+    },
+    {
+      "file": "ekf_config.json",
+      "expected": "a092d297d95620fc5bc724d1bd802436b4fbc0145ac2884a81834a8849e7c728",
+      "actual": "a092d297d95620fc5bc724d1bd802436b4fbc0145ac2884a81834a8849e7c728",
+      "match": true
+    },
+    {
+      "file": "ekf_core.py",
+      "expected": "6b8aaa9c068f6614682902a9e60b271afbc379d366666037987c9f704865c7d5",
+      "actual": "6b8aaa9c068f6614682902a9e60b271afbc379d366666037987c9f704865c7d5",
+      "match": true
+    },
+    {
+      "file": "evaluation_status.py",
+      "expected": "3add80f122e534b5889016da20eb6ff72bd700db75e85929731257384969b05b",
+      "actual": "3add80f122e534b5889016da20eb6ff72bd700db75e85929731257384969b05b",
+      "match": true
+    },
+    {
+      "file": "feedback_core.py",
+      "expected": "09a162c34ef2fac5d51ddceadc550b90879efaebc7874a52f4f9dc10e004bab6",
+      "actual": "09a162c34ef2fac5d51ddceadc550b90879efaebc7874a52f4f9dc10e004bab6",
+      "match": true
+    },
+    {
+      "file": "feedback_runner.py",
+      "expected": "ecac83634f6301eef6895f674bd702e114ec732225edf63fc2e3168b39d7b624",
+      "actual": "ecac83634f6301eef6895f674bd702e114ec732225edf63fc2e3168b39d7b624",
+      "match": true
+    },
+    {
+      "file": "freeze_protocol.py",
+      "expected": "c9000a9e7334e247d7b3fa707226dad8900a59f1cf9a89a65c9b24553ace63ff",
+      "actual": "c9000a9e7334e247d7b3fa707226dad8900a59f1cf9a89a65c9b24553ace63ff",
+      "match": true
+    },
+    {
+      "file": "protocol.json",
+      "expected": "2016fa27d08ab6ab12f7b71b21ef8e552634d3fdecd6102fc672ff75f5e93e03",
+      "actual": "2016fa27d08ab6ab12f7b71b21ef8e552634d3fdecd6102fc672ff75f5e93e03",
+      "match": true
+    },
+    {
+      "file": "record_endpoint.py",
+      "expected": "8e29d306e57b9e3b9fcf99bbfd70aae086d19c1d5979ca6935b3a2cce1dc6e09",
+      "actual": "8e29d306e57b9e3b9fcf99bbfd70aae086d19c1d5979ca6935b3a2cce1dc6e09",
+      "match": true
+    },
+    {
+      "file": "test_feedback.py",
+      "expected": "4aa7803a781b10c23bda706dbf09e1bcbe78f69a3f4a02161d03bf162b7840b3",
+      "actual": "4aa7803a781b10c23bda706dbf09e1bcbe78f69a3f4a02161d03bf162b7840b3",
+      "match": true
+    },
+    {
+      "file": "test_freeze.py",
+      "expected": "b73139cc78c4ee02af9857792673d54abdf18f2148015c86724b141ab0fbca23",
+      "actual": "b73139cc78c4ee02af9857792673d54abdf18f2148015c86724b141ab0fbca23",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/tag_observer.py",
+      "expected": "9cbad1055b60bbfc3a4a39cb7af649b1acb55f55fa78c86c377dff712d66eb94",
+      "actual": "9cbad1055b60bbfc3a4a39cb7af649b1acb55f55fa78c86c377dff712d66eb94",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/package.xml",
+      "expected": "3901307543552399d5b9d75e1c3851478091e90f11b06abef974c99105f5f740",
+      "actual": "3901307543552399d5b9d75e1c3851478091e90f11b06abef974c99105f5f740",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/package.xml:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/setup.py:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/setup.cfg:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/setup.py",
+      "expected": "4556b2152f04ed40d82b5aeecdf067f16fdcc5154e5d3daeca83ef3bfbd34315",
+      "actual": "4556b2152f04ed40d82b5aeecdf067f16fdcc5154e5d3daeca83ef3bfbd34315",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/setup.cfg",
+      "expected": "d5440f12723a067ca10392eb86265162ed962b74eb25d83f69c52fdecb7bb00b",
+      "actual": "d5440f12723a067ca10392eb86265162ed962b74eb25d83f69c52fdecb7bb00b",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/driver.py.before_vision_fix",
+      "expected": "339e00143c120780ee29f0771e7fd02cd881a37121786f4aa540d322fbdfa64a",
+      "actual": "339e00143c120780ee29f0771e7fd02cd881a37121786f4aa540d322fbdfa64a",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_far_tag_fix",
+      "expected": "06827bac64166ad8b352a81167af727df77ac275e88844557e32458ef83f2e9e",
+      "actual": "06827bac64166ad8b352a81167af727df77ac275e88844557e32458ef83f2e9e",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py.before_arrival_fix",
+      "expected": "9a981c0bcc5c3b4620f754e6fcac93036ce8801bbefe3561841786770f05e65e",
+      "actual": "9a981c0bcc5c3b4620f754e6fcac93036ce8801bbefe3561841786770f05e65e",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py",
+      "expected": "883493d37522f1f926f011c63860227ee8a04383d04400ff634bbabd79682400",
+      "actual": "883493d37522f1f926f011c63860227ee8a04383d04400ff634bbabd79682400",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py.before_vision_fix",
+      "expected": "7557b54f18adcaeb0cef19dbf2b22398f3cfe95a48efd1c8d18fccd0d7156361",
+      "actual": "7557b54f18adcaeb0cef19dbf2b22398f3cfe95a48efd1c8d18fccd0d7156361",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/__init__.py",
+      "expected": "c1d2053e5a00b0324b399a6992f195b0b60ca130d3c5b53e1a8de5e3e10f1b00",
+      "actual": "c1d2053e5a00b0324b399a6992f195b0b60ca130d3c5b53e1a8de5e3e10f1b00",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_image_fix_20261109_000833_267934",
+      "expected": "99d74d1e41679a90b3182be24c7619575e9e54833bd7111c55f09fd1277e8f68",
+      "actual": "99d74d1e41679a90b3182be24c7619575e9e54833bd7111c55f09fd1277e8f68",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/logger.py:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_trial_calibration",
+      "expected": "2d06c0ca2a2c575aa670480308e540c12013835146e7e59d303daa2c5099b5ca",
+      "actual": "2d06c0ca2a2c575aa670480308e540c12013835146e7e59d303daa2c5099b5ca",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_stream_fix",
+      "expected": "801ff4c60290d14857129c037f054a99fd9e881a24a15d6ac761ab45547fc53f",
+      "actual": "801ff4c60290d14857129c037f054a99fd9e881a24a15d6ac761ab45547fc53f",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/plot_log.py",
+      "expected": "f2f8cbaab64df45d6eb8d90e832a17fe1f81906efdb24c8a775fcf3a51ac646f",
+      "actual": "f2f8cbaab64df45d6eb8d90e832a17fe1f81906efdb24c8a775fcf3a51ac646f",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/logger.py",
+      "expected": "adb08ff4ceaf17555f877a5b6e9165ca94915d25634a70e2f52628ceeb3337eb",
+      "actual": "adb08ff4ceaf17555f877a5b6e9165ca94915d25634a70e2f52628ceeb3337eb",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_fast_fallback",
+      "expected": "7a9f3ce9c8cb471b857c15d7c438777dad0dbe2bfbfd746204da5500b430e643",
+      "actual": "7a9f3ce9c8cb471b857c15d7c438777dad0dbe2bfbfd746204da5500b430e643",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_detection_gap_fix",
+      "expected": "492ed3ad3bbd098b6d508a8bce0bcc7786fcbcbb43ba3f883319bb508991dfec",
+      "actual": "492ed3ad3bbd098b6d508a8bce0bcc7786fcbcbb43ba3f883319bb508991dfec",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/plot_log.py:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/driver.py:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py.before_terminal_speed_fix",
+      "expected": "25f8651e959cd8a103626c82eb46d62e6bdabb54eea315f565a9c667b3e3de12",
+      "actual": "25f8651e959cd8a103626c82eb46d62e6bdabb54eea315f565a9c667b3e3de12",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/__init__.py:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py",
+      "expected": "746bd91808ab20203885b17d47631277a43a2fae5e0115d7b61f387d778c52a0",
+      "actual": "746bd91808ab20203885b17d47631277a43a2fae5e0115d7b61f387d778c52a0",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/driver.py",
+      "expected": "cc5bba73344f30dd3dd8f6e9b87e58e630ccc6da910457753b3500b6fa9a13f9",
+      "actual": "cc5bba73344f30dd3dd8f6e9b87e58e630ccc6da910457753b3500b6fa9a13f9",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_vision_fix",
+      "expected": "d802e877240c21908fe45aac258f231982a592c04e10239ff5dd707eee4c73dc",
+      "actual": "d802e877240c21908fe45aac258f231982a592c04e10239ff5dd707eee4c73dc",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/odometry_support.py",
+      "expected": "dd692044c62df6acb5050fc5f981dceb49cd009463b8663ed017edf63c6cf5d8",
+      "actual": "dd692044c62df6acb5050fc5f981dceb49cd009463b8663ed017edf63c6cf5d8",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/driver.py.before_stream_fix",
+      "expected": "82c23ef9c2257871b6eaf1a7d27592f4ffa71eeac911462920ff22c8ff5d3a68",
+      "actual": "82c23ef9c2257871b6eaf1a7d27592f4ffa71eeac911462920ff22c8ff5d3a68",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/backup_before_assignment3_odom_20261108_232654_240078/package.xml",
+      "expected": "dddc6cb896953705a89380a7fe01747a4c076f27af232581419883e258c86298",
+      "actual": "dddc6cb896953705a89380a7fe01747a4c076f27af232581419883e258c86298",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/backup_before_assignment3_odom_20261108_232654_240078/driver.py",
+      "expected": "7e0f546a13ec38b7cc62698be7ea57729d8e8ba040347c48c980be2b6c1c2009",
+      "actual": "7e0f546a13ec38b7cc62698be7ea57729d8e8ba040347c48c980be2b6c1c2009",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/resource/rm_flatness_nav",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "file": "frozen_robot_sources/rm_flatness_nav/resource/rm_flatness_nav:Zone.Identifier",
+      "expected": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "actual": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+      "match": true
+    }
+  ],
+  "raw_log_sha256": {
+    "evaluation/feedback_runs/eval_u01/raw_events.csv": "24550b7f882f490fd7271a7420a46ff17da4e6d89204b1fa7df8136b2a64b771",
+    "evaluation/feedback_runs/eval_f01/raw_events.csv": "4120a6628f0bab449c5ac13b3447e1597f7292549df4abbf597f3f055fbd7649",
+    "evaluation/feedback_runs/eval_u02/raw_events.csv": "d4066f7bfc7165861ac0f4bebc669b2f62c951bc474fdcf1903f399cdc9a76c2",
+    "evaluation/feedback_runs/eval_f02/raw_events.csv": "a9917b574ff4449461ce5692acaa37afe771373bb1e3d445af88596098aa22b2",
+    "evaluation/feedback_runs/eval_u03/raw_events.csv": "c6cadc1f3d5fd90143c5ac0df8f643dd9651ea71b77417ed60b3dced85609a77",
+    "evaluation/feedback_runs/eval_f03/raw_events.csv": "b748c66f0d61b73e71320cb5f395d57da976a55d09f47a4f2d6536ca382220c0",
+    "evaluation/feedback_runs/eval_u04/raw_events.csv": "c44b64f6cdde232482e0328a271ec2e91fd7c1cf6a9c7b0605f1152e2cc8ebdf",
+    "evaluation/feedback_runs/eval_f04/raw_events.csv": "72ff0f6065f19a6995d11874139189f3ccdcd0f7fbd7f1be6ede9e4cdda2bb1b",
+    "evaluation/feedback_runs/eval_u05/raw_events.csv": "84333ae357acb062cd3e3c375a7775048eb1705c822ae715f1fe81a3f409120f",
+    "evaluation/feedback_runs/eval_f05/raw_events.csv": "c68cc2b4ef87b8b762d281ea286606982bd3e1f414e4077920ed425f8bdc539d"
+  },
+  "executed_evaluation_attempts": 10,
+  "completed": 10,
+  "aborted": 0,
+  "previews": 1,
+  "order_verified": true,
+  "all_active_state_checks_healthy": true,
+  "all_covariances_positive_semidefinite": true,
+  "physical_placement_verified_by_hash": false,
+  "endpoint_policy": "Median last ten logged FEEDBACK_STATE values at least 1 second after STOP; time samples are correlated.",
+  "residual_policy": "Range source time = receipt elapsed minus source age. Interpolate odometry pose and logged EKF state on that same callback-receipt timeline, max bracket 0.20/0.10 s, no extrapolation, range age <=0.40 s. Hardware acquisition synchronization unavailable."
+}

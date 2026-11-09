@@ -1,0 +1,68 @@
+\subsection{All trials shown together}
+To make it easier to compare individual trials, I plotted all ten evaluation runs on one set of axes. Each color identifies one run. Circles show unfiltered feedback and triangles show filtered feedback. I aligned time to motion start and included every recorded active feedback-state sample, without extending a run beyond its actual motion window. There are 1050 plotted samples in total; the number of independent trials is still ten.
+\fig{figure_E_all_trial_scatter}{1.0}{Scatter plot of all ten evaluation trajectories, five U and five F. The vertical axis shows the estimate used by each controller: raw odometry for U and EKF progress for F. Hollow markers identify the last recorded active sample of each run. These are estimated trajectories, not continuous physical measurements. The dashed line is the common cubic reference and the vertical dotted line marks $T=4$ s. Every trial is retained.}
+The traces follow a similar overall pattern, but their agreement does not show that the robot reached the physical target. For that reason, I also plotted all ten measured final gaps in their actual execution order.
+\fig{figure_F_endpoint_scatter}{1.0}{Scatter plot of the measured physical final clearance in every evaluation run. Point labels are in cm. The method means are 25.50 cm (U) and 26.06 cm (F), and the physical goal is 20.00 cm. All ten runs stopped at the common raw ToF guard. The ruler division was 1 mm; no error bars are shown because this division is not a calibrated uncertainty bound.}
+
+\subsection{Sample variance and covariance across trials}
+I used one settled endpoint from each trial for the statistical analysis. This gives five observations per method, rather than treating the many samples within a run as independent trials. For a measured quantity $q_i$, I calculated the sample mean and variance as
+\[
+\bar q=\frac{1}{n}\sum_{i=1}^{n}q_i,\qquad
+s_q^2=\frac{1}{n-1}\sum_{i=1}^{n}(q_i-\bar q)^2,\qquad s_q=\sqrt{s_q^2}.
+\]
+For two quantities measured on the same trials, the sample covariance is
+\[
+s_{ab}=\frac{1}{n-1}\sum_{i=1}^{n}(a_i-\bar a)(b_i-\bar b).
+\]
+Variance measures how much the results differ from their own mean. Covariance indicates whether two quantities tend to increase or decrease together. Both have squared units here, mm$^2$, because the input quantities are in mm. I used the $n-1$ denominator for both, with $n=5$ in each method group.
+\begin{table}[H]\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Method & Quantity & $n$ & Mean (mm) & SD (mm) & Variance (mm$^2$)\\\midrule
+U & Physical final gap & 5 & 255.000 & 7.071 & 50.000\\
+U & Raw odometry endpoint error & 5 & -2.785 & 4.026 & 16.206\\
+U & Corrected odometry endpoint error & 5 & -9.559 & 4.026 & 16.206\\
+U & EKF endpoint error & 5 & -9.569 & 2.894 & 8.376\\
+F & Physical final gap & 5 & 260.600 & 6.066 & 36.800\\
+F & Raw odometry endpoint error & 5 & 1.891 & 4.419 & 19.531\\
+F & Corrected odometry endpoint error & 5 & -4.883 & 4.419 & 19.531\\
+F & EKF endpoint error & 5 & -5.117 & 3.338 & 11.145\\
+\bottomrule
+\end{tabular}
+\caption{Sample spread across the five trials in each method. For the physical gap row, the mean is the actual final clearance. For the three estimator rows, the mean is the signed travel error relative to measured physical travel. Their meanings differ, although both use mm. Variance of final clearance also equals variance of final-gap error because subtracting the constant 200 mm goal does not change variance.}
+\end{table}
+The final-gap variance was 50.000 mm$^2$ for unfiltered feedback and 36.800 mm$^2$ for filtered feedback. The corresponding SDs were 7.071 and 6.066 mm. Filtered runs were slightly more consistent in final gap, but their mean gap was farther from the 200 mm goal. A smaller variance therefore does not, on its own, mean better accuracy.
+
+I formed a covariance matrix from the three endpoint estimation errors within each method. For each run the error vector was $\mathbf e_i=[e_{\mathrm{raw},i},e_{\mathrm{corrected},i},e_{\mathrm{EKF},i}]^\top$, and I used
+\[
+\bar{\mathbf e}=\frac{1}{n}\sum_i\mathbf e_i,\qquad
+S_e=\frac{1}{n-1}\sum_i(\mathbf e_i-\bar{\mathbf e})(\mathbf e_i-\bar{\mathbf e})^\top.
+\]
+All entries in the following tables are in mm$^2$. The diagonal contains the individual error variances. The off-diagonal entries describe how the errors vary together across the same five runs. I calculated the methods separately; I did not treat an unfiltered run and the next filtered run as a matched measurement pair.
+\begin{table}[H]\centering
+\begin{tabular}{lrrr}
+\toprule
+Error & Raw & Corrected & EKF\\\midrule
+Raw odometry & 16.206 & 16.206 & 10.892\\
+Corrected odometry & 16.206 & 16.206 & 10.892\\
+EKF & 10.892 & 10.892 & 8.376\\
+\bottomrule
+\end{tabular}
+\caption{Unfiltered feedback endpoint-error sample covariance, five trials, all entries in mm$^2$. Rows and columns refer to the same run-level error variables.}
+\end{table}
+\begin{table}[H]\centering
+\begin{tabular}{lrrr}
+\toprule
+Error & Raw & Corrected & EKF\\\midrule
+Raw odometry & 19.531 & 19.531 & 13.526\\
+Corrected odometry & 19.531 & 19.531 & 13.526\\
+EKF & 13.526 & 13.526 & 11.145\\
+\bottomrule
+\end{tabular}
+\caption{Filtered feedback endpoint-error sample covariance, five trials, all entries in mm$^2$. Rows and columns refer to the same run-level error variables.}
+\end{table}
+For example, the filtered raw-error squared deviations sum to 78.122564 mm$^2$. Dividing by $5-1=4$ gives a sample variance of 19.530641 mm$^2$. The raw/EKF centered cross-products sum to 54.103204 mm$^2$, giving covariance 13.525801 mm$^2$ with the same denominator. These calculations use the full-precision estimates, so recalculating from the rounded table entries can give slightly different results. Extra decimal places describe arithmetic precision, not physical measurement accuracy.
+
+The covariance of raw and corrected odometry equals their variance in both groups. This is expected: at these settled endpoints, corrected odometry is raw odometry minus the same 6.774102 mm offset. Subtracting a constant changes the mean error but leaves variance unchanged, and the correlation of the two error vectors is exactly 1. The covariance matrices are therefore singular. This is a mathematical consequence of the correction, not evidence of an extra independent sensor.
+
+The raw/EKF error correlations were 0.935 for U and 0.917 for F. Their positive covariance is consistent with the EKF using odometry, and all three errors also share the same measured physical travel in their definition. Measurement error in that physical travel can itself introduce covariance. These empirical matrices describe the spread of endpoint errors across trials; they are different from the EKF's internal five-state covariance $P$ and do not identify a sensor-noise matrix $R$. With only five trials per method, I use them as descriptive statistics rather than proof of an improvement or a general noise model.

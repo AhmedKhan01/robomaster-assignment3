@@ -1,0 +1,173 @@
+{
+  "sample_definition": "One settled endpoint per independent trial; n=5 within each method. No pooling of periodic state samples.",
+  "denominator": "n-1",
+  "covariance_units": "mm^2",
+  "covariance_order": [
+    "Raw odometry",
+    "Corrected odometry",
+    "EKF"
+  ],
+  "covariance_variables": "estimator settled travel minus physically measured travel",
+  "variance_table": [
+    {
+      "method": "unfiltered",
+      "quantity": "Physical final gap",
+      "n": 5,
+      "mean_mm": 255.0,
+      "sample_sd_mm": 7.0710678118654755,
+      "sample_variance_mm2": 50.0
+    },
+    {
+      "method": "unfiltered",
+      "quantity": "Raw odometry endpoint error",
+      "n": 5,
+      "mean_mm": -2.784821019130579,
+      "sample_sd_mm": 4.0257001205949114,
+      "sample_variance_mm2": 16.206261460957883
+    },
+    {
+      "method": "unfiltered",
+      "quantity": "Corrected odometry endpoint error",
+      "n": 5,
+      "mean_mm": -9.558923370101448,
+      "sample_sd_mm": 4.025700120594911,
+      "sample_variance_mm2": 16.20626146095788
+    },
+    {
+      "method": "unfiltered",
+      "quantity": "EKF endpoint error",
+      "n": 5,
+      "mean_mm": -9.56884344997716,
+      "sample_sd_mm": 2.894166874339073,
+      "sample_variance_mm2": 8.3762018965216
+    },
+    {
+      "method": "filtered",
+      "quantity": "Physical final gap",
+      "n": 5,
+      "mean_mm": 260.6,
+      "sample_sd_mm": 6.06630035524124,
+      "sample_variance_mm2": 36.79999999999999
+    },
+    {
+      "method": "filtered",
+      "quantity": "Raw odometry endpoint error",
+      "n": 5,
+      "mean_mm": 1.8912313725459426,
+      "sample_sd_mm": 4.419348481327428,
+      "sample_variance_mm2": 19.53064099941104
+    },
+    {
+      "method": "filtered",
+      "quantity": "Corrected odometry endpoint error",
+      "n": 5,
+      "mean_mm": -4.882870978424924,
+      "sample_sd_mm": 4.419348481327427,
+      "sample_variance_mm2": 19.530640999411037
+    },
+    {
+      "method": "filtered",
+      "quantity": "EKF endpoint error",
+      "n": 5,
+      "mean_mm": -5.11700257037433,
+      "sample_sd_mm": 3.3384550436275715,
+      "sample_variance_mm2": 11.14528207832237
+    }
+  ],
+  "covariance": {
+    "unfiltered": [
+      [
+        16.206261460957883,
+        16.206261460957883,
+        10.892172155344552
+      ],
+      [
+        16.206261460957883,
+        16.206261460957883,
+        10.892172155344552
+      ],
+      [
+        10.892172155344552,
+        10.892172155344552,
+        8.376201896521598
+      ]
+    ],
+    "filtered": [
+      [
+        19.53064099941104,
+        19.530640999411037,
+        13.525801032882137
+      ],
+      [
+        19.530640999411037,
+        19.530640999411037,
+        13.525801032882136
+      ],
+      [
+        13.525801032882137,
+        13.525801032882136,
+        11.145282078322369
+      ]
+    ]
+  },
+  "correlation": {
+    "unfiltered": [
+      [
+        1.0,
+        1.0,
+        0.934866306967873
+      ],
+      [
+        1.0,
+        1.0,
+        0.934866306967873
+      ],
+      [
+        0.934866306967873,
+        0.934866306967873,
+        0.9999999999999999
+      ]
+    ],
+    "filtered": [
+      [
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9167675101881211
+      ],
+      [
+        0.9999999999999998,
+        1.0,
+        0.9167675101881211
+      ],
+      [
+        0.916767510188121,
+        0.916767510188121,
+        0.9999999999999999
+      ]
+    ]
+  },
+  "worked_example": {
+    "unfiltered": {
+      "raw_error_squared_deviation_sum_mm2": 64.82504584383153,
+      "raw_EKF_cross_product_sum_mm2": 43.56868862137821
+    },
+    "filtered": {
+      "raw_error_squared_deviation_sum_mm2": 78.12256399764416,
+      "raw_EKF_cross_product_sum_mm2": 54.10320413152855
+    }
+  },
+  "scatter_sample_counts": {
+    "eval_u01": 108,
+    "eval_f01": 102,
+    "eval_u02": 119,
+    "eval_f02": 100,
+    "eval_u03": 101,
+    "eval_f03": 104,
+    "eval_u04": 103,
+    "eval_f04": 103,
+    "eval_u05": 105,
+    "eval_f05": 105
+  },
+  "total_scatter_samples": 1050,
+  "original_source": "evaluation_trial_table.csv and original FEEDBACK_STATE extractions"
+}
