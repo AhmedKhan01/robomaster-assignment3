@@ -19,9 +19,7 @@ Ten evaluation runs were completed: five unfiltered and five filtered. Every run
 | `calibration/` | Calibration scripts, original pilot logs and measured endpoints |
 | `ekf_development/` | Offline EKF replay, live preview and tests |
 | `analysis/` | Offline log analysis, scatter plots, statistics and extracted CSVs |
-| `report/` | Word/PDF reports, editable LaTeX source and rebuild scripts |
 | `commissioning/`, `diagnostics/` | Commissioning measurements and available development abort logs |
-| `presentation/` | Presentation reference and speaking notes |
 
 ## Reproduce the analysis without a robot
 
@@ -47,16 +45,14 @@ python -m unittest -v test_feedback.py test_freeze.py
 cd ..
 ```
 
-See `README.txt` for the full environment record, report rebuild commands and measurement policies. Original paths in metadata document the experiment computer and are not portable launch instructions.
+The complete report, report sources, environment record and measurement policies are retained in `original_evidence.zip` (including its `README.txt`). Original paths in metadata document the experiment computer and are not portable launch instructions.
 
 ## Hardware execution
 
 The driver can move the arm at startup. Execution flags enable chassis motion; preview and offline analysis have separate purposes. Do not run hardware scripts merely to reproduce the report. The frozen evaluation software and its evidence must remain unchanged. The original ROS driver was the sole SDK owner, with competing planners stopped.
 
-This is a Windows-compatible browsing/upload copy. Ten colon-containing Windows metadata sidecars are omitted from the visible tree; every Python file, runtime setting and raw CSV remains unchanged. The complete original tree is preserved in `original_evidence.zip`. For frozen-hash verification and offline reproduction, extract that evidence ZIP into a separate Linux directory and use its original tree: the Windows copy alone will fail checks for the omitted sidecars. See `WINDOWS_COMPATIBILITY.txt`. `.gitattributes` disables text conversion to preserve the recorded hashes.
+This is a Windows-compatible browsing/upload copy. Ten colon-containing Windows metadata sidecars are omitted from the visible tree; every Python file, runtime setting and raw CSV remains unchanged. The complete original tree is preserved in `original_evidence.zip`. For frozen-hash verification and offline reproduction, extract that evidence ZIP into a separate Linux directory and use its original tree: the Windows copy alone will fail checks for the omitted sidecars.
 
-## Attribution and visibility
+## Attribution
 
 The work reuses the earlier ROS 2 project and the DJI RoboMaster SDK, ROS 2, OpenCV, NumPy and Matplotlib. ChatGPT/Codex assisted implementation, debugging, analysis and report preparation; the student performed the real robot trials and supplied the physical measurements. Dependencies are installed separately, not bundled here. No blanket license is added for third-party or reused material.
-
-The supplied assignment handout requests a private repository. Keep this repository private unless the instructor has explicitly superseded that requirement. `UPLOAD_TO_GITHUB.md` explains both visibility choices. The assignment handout itself is not included.
