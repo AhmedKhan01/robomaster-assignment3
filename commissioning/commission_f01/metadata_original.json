@@ -1,0 +1,165 @@
+{
+  "run_id": "commission_f01",
+  "method": "filtered",
+  "execute": true,
+  "stage": "commissioning_only",
+  "evaluation_run": false,
+  "evaluation_ready": false,
+  "created_utc": "2026-11-09T14:19:48.276489+00:00",
+  "physical_start_gap_m": 0.6,
+  "physical_final_gap_m": 0.256,
+  "physical_measurement_resolution_m": 0.001,
+  "protocol": {
+    "stage": "commissioning_only",
+    "evaluation_ready": false,
+    "calibration_frozen": false,
+    "target_physical_gap_m": 0.2,
+    "kp_per_s": 0.5,
+    "max_speed_m_s": 0.16,
+    "near_tof_m": 0.5,
+    "near_speed_cap_m_s": 0.06,
+    "raw_tof_stop_m": 0.25,
+    "steering_gain_rad_s_per_normalized_error": 0.4,
+    "max_yaw_rate_rad_s": 0.1,
+    "countdown_s": 5.0,
+    "precheck_timeout_s": 20.0,
+    "preview_duration_s": 10.0,
+    "post_reference_timeout_s": 15.0,
+    "settle_s": 1.5,
+    "progress_tolerance_m": 0.005,
+    "static_checks": [
+      {
+        "intended_physical_gap_m": 0.3,
+        "raw_tof_m": 0.306
+      },
+      {
+        "intended_physical_gap_m": 0.25,
+        "raw_tof_m": 0.252
+      },
+      {
+        "intended_physical_gap_m": 0.2,
+        "raw_tof_m": 0.19
+      }
+    ],
+    "guard_note": "Candidate conservative supervisor guard 0.25 m raw ToF for commissioning. Static single readings do not prove dynamic stopping accuracy. Driver independent 0.20 m raw latch remains.",
+    "steering_note": "Normalized horizontal pixel centering, not calibrated angular bearing. Same steering in both modes."
+  },
+  "ekf_config": {
+    "stage": "EKF_PROTOTYPE_PREVIEW_ONLY",
+    "evaluation_ready": false,
+    "calibration_frozen": false,
+    "odometry_bias_m": 0.0067741023509708675,
+    "tof_travel_scale": 0.8970814132104455,
+    "velocity_time_constant_s": 0.25,
+    "yaw_rate_time_constant_s": 0.25,
+    "bias_ramp_s": 2.0,
+    "minimum_update_interval_s": 0.25,
+    "odom_x_variance_m2": 0.000696299788922833,
+    "odom_y_variance_m2": 0.000696299788922833,
+    "tof_variance_m2": 0.0014083195726296031,
+    "velocity_diffusion": 0.02,
+    "yaw_rate_diffusion": 0.06,
+    "initial_state_sd": [
+      0.01,
+      0.01,
+      0.08726646259971647,
+      0.02,
+      0.05
+    ],
+    "provenance": {
+      "calibration_sha256": "e3f4665a9e6a8a3a46588661b5c943f828bd453fec9a16a50c3fbb7b2ca26842",
+      "velocity_proxy_rms_m_s": 0.0019229452543164703,
+      "notes": [
+        "Bias and ToF scale are the five-pilot medians.",
+        "Position R uses four times endpoint residual sample variance; y variance assumed equal to x.",
+        "Endpoint residual spread is a conservative tuning proxy, not uniquely identified per-sample sensor noise.",
+        "Velocity diffusion uses the RMS middle odometry slope minus request across pilots, floored at 0.01 m/s and divided by sqrt(0.25 s).",
+        "Yaw-rate diffusion 0.06 rad/s/sqrt(s), response constants 0.25 s, startup bias ramp 2 s and initial SDs are declared priors.",
+        "Updates limited to 4 Hz per sensor to reduce repeated correlated updates; residual dependence remains.",
+        "Prototype must be reviewed on calibration data before calibration/configuration freeze."
+      ]
+    }
+  },
+  "source_sha256": {
+    "feedback_core.py": "09a162c34ef2fac5d51ddceadc550b90879efaebc7874a52f4f9dc10e004bab6",
+    "feedback_runner.py": "0a4b71a701c64de7a5f73af91593c6158562a17c782dabf14748150a14808bb2",
+    "ekf_core.py": "6b8aaa9c068f6614682902a9e60b271afbc379d366666037987c9f704865c7d5",
+    "protocol.json": "5c4342ff07aa460444c6c4e3796b0f4e12dd5465dae21db407621a6e869fa9b6",
+    "ekf_config.json": "0dbf078e0fddc8cb907ad374056b7132468c2494ba780a348aed4e0f5be3b7c8"
+  },
+  "camera_geometry": "upright tag; normalized pixel centering; no camera-derived distance",
+  "result": "COMPLETED_COMMISSIONING",
+  "stop_reason": "RAW_TOF_GUARD",
+  "motion_start_elapsed_s": 6.308141557999988,
+  "stop_elapsed_s": 11.443347761000041,
+  "clock_jump_detected": false,
+  "preview_issue_counts": {},
+  "final_state": {
+    "phase": "SETTLING",
+    "status": "FINISHED",
+    "method": "filtered",
+    "motion_elapsed_s": 6.984133866000775,
+    "reference_x_m": 0.39999999999999997,
+    "reference_v_m_s": 0.0,
+    "reference_a_m_s2": 0.0,
+    "reference_T_s": 4.0,
+    "reference_L_m": 0.39999999999999997,
+    "requested_v_m_s": 0.0,
+    "requested_omega_rad_s": 0.0,
+    "stop_reason": "RAW_TOF_GUARD",
+    "raw_odom_progress_m": 0.3326077390038502,
+    "scaled_tof_travel_m": 0.3023164362519201,
+    "corrected_odom_progress_m": 0.32583363665287934,
+    "filtered_progress_m": 0.325441927983088,
+    "ekf_state": [
+      0.325441927983088,
+      -0.001680188964189099,
+      -0.020633498230701264,
+      -0.00015950693344562468,
+      -5.630850881454977e-06
+    ],
+    "covariance": [
+      [
+        5.437890425265009e-05,
+        -3.841012922832457e-07,
+        2.173767162201816e-06,
+        1.1334918164442478e-05,
+        -2.2389437599873343e-11
+      ],
+      [
+        -3.841012922832457e-07,
+        5.289933200957606e-05,
+        0.0001894792001612477,
+        -2.335995871369364e-07,
+        -9.97485169956278e-10
+      ],
+      [
+        2.173767162201816e-06,
+        0.0001894792001612477,
+        0.001855545284999616,
+        2.3358353746173028e-08,
+        0.00011592526837136404
+      ],
+      [
+        1.1334918164442478e-05,
+        -2.335995871369364e-07,
+        2.3358353746173028e-08,
+        5.297094620387371e-05,
+        -2.9772421154160153e-13
+      ],
+      [
+        -2.2389437599873343e-11,
+        -9.97485169956278e-10,
+        0.00011592526837136404,
+        -2.9772421154160153e-13,
+        0.00047832987329555154
+      ]
+    ],
+    "ekf_counts": {
+      "odom_accepted": 25,
+      "tof_accepted": 25,
+      "rejected": 198
+    }
+  },
+  "closed_utc": "2026-11-09T14:20:01.871809+00:00"
+}
