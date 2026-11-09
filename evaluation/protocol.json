@@ -1,0 +1,40 @@
+{
+  "stage": "frozen_evaluation",
+  "evaluation_ready": true,
+  "calibration_frozen": true,
+  "target_physical_gap_m": 0.2,
+  "kp_per_s": 0.5,
+  "max_speed_m_s": 0.16,
+  "near_tof_m": 0.5,
+  "near_speed_cap_m_s": 0.06,
+  "raw_tof_stop_m": 0.25,
+  "steering_gain_rad_s_per_normalized_error": 0.4,
+  "max_yaw_rate_rad_s": 0.1,
+  "countdown_s": 5.0,
+  "precheck_timeout_s": 20.0,
+  "preview_duration_s": 10.0,
+  "post_reference_timeout_s": 15.0,
+  "settle_s": 1.5,
+  "progress_tolerance_m": 0.005,
+  "static_checks": [
+    {
+      "intended_physical_gap_m": 0.3,
+      "raw_tof_m": 0.306
+    },
+    {
+      "intended_physical_gap_m": 0.25,
+      "raw_tof_m": 0.252
+    },
+    {
+      "intended_physical_gap_m": 0.2,
+      "raw_tof_m": 0.19
+    }
+  ],
+  "guard_note": "Frozen conservative raw-ToF guard after commissioning. Physical reference goal remains 0.20 m; early guard stops and their physical gap errors must be reported.",
+  "steering_note": "Normalized horizontal pixel centering, not calibrated angular bearing. Same steering in both modes.",
+  "evaluation_plan": {
+    "nominal_start_gap_m": 0.6,
+    "valid_runs_per_method": 5,
+    "alternating_order": true
+  }
+}

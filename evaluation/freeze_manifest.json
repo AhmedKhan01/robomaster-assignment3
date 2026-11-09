@@ -1,0 +1,110 @@
+{
+  "frozen_utc": "2026-11-09T14:32:16.752842+00:00",
+  "package_sha256": {
+    "README.md": "6046bd40117ba2c1489d42a6deb72d7215e4c5c0ce05eb288fca513105ff986c",
+    "commissioning_measurements.json": "9aa421f6167083a0d9fd0a80471de6c0da05f28cf47e384d3e2a96badcd047f8",
+    "ekf_config.json": "a092d297d95620fc5bc724d1bd802436b4fbc0145ac2884a81834a8849e7c728",
+    "ekf_core.py": "6b8aaa9c068f6614682902a9e60b271afbc379d366666037987c9f704865c7d5",
+    "evaluation_status.py": "3add80f122e534b5889016da20eb6ff72bd700db75e85929731257384969b05b",
+    "feedback_core.py": "09a162c34ef2fac5d51ddceadc550b90879efaebc7874a52f4f9dc10e004bab6",
+    "feedback_runner.py": "ecac83634f6301eef6895f674bd702e114ec732225edf63fc2e3168b39d7b624",
+    "freeze_protocol.py": "c9000a9e7334e247d7b3fa707226dad8900a59f1cf9a89a65c9b24553ace63ff",
+    "protocol.json": "2016fa27d08ab6ab12f7b71b21ef8e552634d3fdecd6102fc672ff75f5e93e03",
+    "record_endpoint.py": "8e29d306e57b9e3b9fcf99bbfd70aae086d19c1d5979ca6935b3a2cce1dc6e09",
+    "test_feedback.py": "4aa7803a781b10c23bda706dbf09e1bcbe78f69a3f4a02161d03bf162b7840b3",
+    "test_freeze.py": "b73139cc78c4ee02af9857792673d54abdf18f2148015c86724b141ab0fbca23"
+  },
+  "external_sha256": {
+    "/home/khanm/rm_flatness_ws/src/rm_flatness_nav/rm_flatness_nav/driver.py": "cc5bba73344f30dd3dd8f6e9b87e58e630ccc6da910457753b3500b6fa9a13f9",
+    "/home/khanm/rm_flatness_ws/src/rm_flatness_nav/rm_flatness_nav/odometry_support.py": "dd692044c62df6acb5050fc5f981dceb49cd009463b8663ed017edf63c6cf5d8",
+    "/mnt/c/Users/khanm/Downloads/tag_observer.py": "9cbad1055b60bbfc3a4a39cb7af649b1acb55f55fa78c86c377dff712d66eb94",
+    "/home/khanm/rm_flatness_ws/build/rm_flatness_nav/rm_flatness_nav/driver.py": "cc5bba73344f30dd3dd8f6e9b87e58e630ccc6da910457753b3500b6fa9a13f9",
+    "/home/khanm/rm_tag_cv5_test/opencv_contrib_python_headless-5.0.0.93.dist-info/METADATA": "0d3720e0946d69be7a84dc0c12de82ada362ba4d9e3a854bf22cb70f0971e17b"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "1.26.4",
+      "robomaster": "0.1.2.0",
+      "opencv-python": "4.11.0.86"
+    }
+  },
+  "snapshot_sha256": {
+    "frozen_robot_sources/tag_observer.py": "9cbad1055b60bbfc3a4a39cb7af649b1acb55f55fa78c86c377dff712d66eb94",
+    "frozen_robot_sources/rm_flatness_nav/package.xml": "3901307543552399d5b9d75e1c3851478091e90f11b06abef974c99105f5f740",
+    "frozen_robot_sources/rm_flatness_nav/package.xml:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/setup.py:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/setup.cfg:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/setup.py": "4556b2152f04ed40d82b5aeecdf067f16fdcc5154e5d3daeca83ef3bfbd34315",
+    "frozen_robot_sources/rm_flatness_nav/setup.cfg": "d5440f12723a067ca10392eb86265162ed962b74eb25d83f69c52fdecb7bb00b",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/driver.py.before_vision_fix": "339e00143c120780ee29f0771e7fd02cd881a37121786f4aa540d322fbdfa64a",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_far_tag_fix": "06827bac64166ad8b352a81167af727df77ac275e88844557e32458ef83f2e9e",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py.before_arrival_fix": "9a981c0bcc5c3b4620f754e6fcac93036ce8801bbefe3561841786770f05e65e",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py": "883493d37522f1f926f011c63860227ee8a04383d04400ff634bbabd79682400",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py.before_vision_fix": "7557b54f18adcaeb0cef19dbf2b22398f3cfe95a48efd1c8d18fccd0d7156361",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/__init__.py": "c1d2053e5a00b0324b399a6992f195b0b60ca130d3c5b53e1a8de5e3e10f1b00",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_image_fix_20261109_000833_267934": "99d74d1e41679a90b3182be24c7619575e9e54833bd7111c55f09fd1277e8f68",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/logger.py:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_trial_calibration": "2d06c0ca2a2c575aa670480308e540c12013835146e7e59d303daa2c5099b5ca",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_stream_fix": "801ff4c60290d14857129c037f054a99fd9e881a24a15d6ac761ab45547fc53f",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/plot_log.py": "f2f8cbaab64df45d6eb8d90e832a17fe1f81906efdb24c8a775fcf3a51ac646f",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/logger.py": "adb08ff4ceaf17555f877a5b6e9165ca94915d25634a70e2f52628ceeb3337eb",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_fast_fallback": "7a9f3ce9c8cb471b857c15d7c438777dad0dbe2bfbfd746204da5500b430e643",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_detection_gap_fix": "492ed3ad3bbd098b6d508a8bce0bcc7786fcbcbb43ba3f883319bb508991dfec",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/plot_log.py:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/driver.py:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py.before_terminal_speed_fix": "25f8651e959cd8a103626c82eb46d62e6bdabb54eea315f565a9c667b3e3de12",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/__init__.py:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/core.py": "746bd91808ab20203885b17d47631277a43a2fae5e0115d7b61f387d778c52a0",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/driver.py": "cc5bba73344f30dd3dd8f6e9b87e58e630ccc6da910457753b3500b6fa9a13f9",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/planner.py.before_vision_fix": "d802e877240c21908fe45aac258f231982a592c04e10239ff5dd707eee4c73dc",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/odometry_support.py": "dd692044c62df6acb5050fc5f981dceb49cd009463b8663ed017edf63c6cf5d8",
+    "frozen_robot_sources/rm_flatness_nav/rm_flatness_nav/driver.py.before_stream_fix": "82c23ef9c2257871b6eaf1a7d27592f4ffa71eeac911462920ff22c8ff5d3a68",
+    "frozen_robot_sources/rm_flatness_nav/backup_before_assignment3_odom_20261108_232654_240078/package.xml": "dddc6cb896953705a89380a7fe01747a4c076f27af232581419883e258c86298",
+    "frozen_robot_sources/rm_flatness_nav/backup_before_assignment3_odom_20261108_232654_240078/driver.py": "7e0f546a13ec38b7cc62698be7ea57729d8e8ba040347c48c980be2b6c1c2009",
+    "frozen_robot_sources/rm_flatness_nav/resource/rm_flatness_nav": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frozen_robot_sources/rm_flatness_nav/resource/rm_flatness_nav:Zone.Identifier": "b952d24cf701bc4e7a7d21e1ae85c611824e80579a89836c0cb49b193446ccfe"
+  },
+  "nominal_start_gap_m": 0.6,
+  "minimum_start_gap_m": 0.6,
+  "maximum_start_gap_m": 0.62,
+  "planned_order": [
+    "eval_u01",
+    "eval_f01",
+    "eval_u02",
+    "eval_f02",
+    "eval_u03",
+    "eval_f03",
+    "eval_u04",
+    "eval_f04",
+    "eval_u05",
+    "eval_f05"
+  ],
+  "commissioning_review": {
+    "source": "Physical endpoints confirmed by user in conversation; original commissioning logs remain separate from evaluation.",
+    "runs": [
+      {
+        "run_id": "commission_u01",
+        "method": "unfiltered",
+        "start_gap_m": 0.6,
+        "final_gap_m": 0.25,
+        "resolution_m": 0.001
+      },
+      {
+        "run_id": "commission_f01",
+        "method": "filtered",
+        "start_gap_m": 0.6,
+        "final_gap_m": 0.256,
+        "resolution_m": 0.001
+      }
+    ]
+  },
+  "limitations": [
+    "Raw 0.25 m guard stops early relative to 0.20 m physical goal.",
+    "Global ToF travel scale underestimates travel in the shorter commissioning runs.",
+    "Noise/response assumptions are retained unchanged; no EKF improvement is presumed.",
+    "Camera/tag pose and marked start must remain physically fixed; source hashes cannot verify physical placement."
+  ]
+}

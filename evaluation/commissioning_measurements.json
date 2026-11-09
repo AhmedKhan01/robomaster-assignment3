@@ -1,0 +1,7 @@
+{
+  "source": "Physical endpoints confirmed by user in conversation; original commissioning logs remain separate from evaluation.",
+  "runs": [
+    {"run_id": "commission_u01", "method": "unfiltered", "start_gap_m": 0.60, "final_gap_m": 0.250, "resolution_m": 0.001},
+    {"run_id": "commission_f01", "method": "filtered", "start_gap_m": 0.60, "final_gap_m": 0.256, "resolution_m": 0.001}
+  ]
+}

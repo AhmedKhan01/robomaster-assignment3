@@ -1,0 +1,173 @@
+{
+  "run_id": "eval_f01",
+  "method": "filtered",
+  "execute": true,
+  "stage": "evaluation",
+  "evaluation_run": true,
+  "evaluation_ready": true,
+  "frozen_manifest_sha256": "7910a7b96738cbcb9bfd80abfba5f2f09dcf20eb11f2e82df1823e416e169660",
+  "planned_slot": "eval_f01",
+  "attempt": 1,
+  "created_utc": "2026-11-09T14:40:50.707515+00:00",
+  "physical_start_gap_m": 0.6,
+  "physical_final_gap_m": 0.253,
+  "physical_measurement_resolution_m": 0.001,
+  "protocol": {
+    "stage": "frozen_evaluation",
+    "evaluation_ready": true,
+    "calibration_frozen": true,
+    "target_physical_gap_m": 0.2,
+    "kp_per_s": 0.5,
+    "max_speed_m_s": 0.16,
+    "near_tof_m": 0.5,
+    "near_speed_cap_m_s": 0.06,
+    "raw_tof_stop_m": 0.25,
+    "steering_gain_rad_s_per_normalized_error": 0.4,
+    "max_yaw_rate_rad_s": 0.1,
+    "countdown_s": 5.0,
+    "precheck_timeout_s": 20.0,
+    "preview_duration_s": 10.0,
+    "post_reference_timeout_s": 15.0,
+    "settle_s": 1.5,
+    "progress_tolerance_m": 0.005,
+    "static_checks": [
+      {
+        "intended_physical_gap_m": 0.3,
+        "raw_tof_m": 0.306
+      },
+      {
+        "intended_physical_gap_m": 0.25,
+        "raw_tof_m": 0.252
+      },
+      {
+        "intended_physical_gap_m": 0.2,
+        "raw_tof_m": 0.19
+      }
+    ],
+    "guard_note": "Frozen conservative raw-ToF guard after commissioning. Physical reference goal remains 0.20 m; early guard stops and their physical gap errors must be reported.",
+    "steering_note": "Normalized horizontal pixel centering, not calibrated angular bearing. Same steering in both modes.",
+    "evaluation_plan": {
+      "nominal_start_gap_m": 0.6,
+      "valid_runs_per_method": 5,
+      "alternating_order": true
+    }
+  },
+  "ekf_config": {
+    "stage": "frozen_evaluation",
+    "evaluation_ready": true,
+    "calibration_frozen": true,
+    "odometry_bias_m": 0.0067741023509708675,
+    "tof_travel_scale": 0.8970814132104455,
+    "velocity_time_constant_s": 0.25,
+    "yaw_rate_time_constant_s": 0.25,
+    "bias_ramp_s": 2.0,
+    "minimum_update_interval_s": 0.25,
+    "odom_x_variance_m2": 0.000696299788922833,
+    "odom_y_variance_m2": 0.000696299788922833,
+    "tof_variance_m2": 0.0014083195726296031,
+    "velocity_diffusion": 0.02,
+    "yaw_rate_diffusion": 0.06,
+    "initial_state_sd": [
+      0.01,
+      0.01,
+      0.08726646259971647,
+      0.02,
+      0.05
+    ],
+    "provenance": {
+      "calibration_sha256": "e3f4665a9e6a8a3a46588661b5c943f828bd453fec9a16a50c3fbb7b2ca26842",
+      "velocity_proxy_rms_m_s": 0.0019229452543164703,
+      "notes": [
+        "Bias and ToF scale are the five-pilot medians.",
+        "Position R uses four times endpoint residual sample variance; y variance assumed equal to x.",
+        "Endpoint residual spread is a conservative tuning proxy, not uniquely identified per-sample sensor noise.",
+        "Velocity diffusion uses the RMS middle odometry slope minus request across pilots, floored at 0.01 m/s and divided by sqrt(0.25 s).",
+        "Yaw-rate diffusion 0.06 rad/s/sqrt(s), response constants 0.25 s, startup bias ramp 2 s and initial SDs are declared priors.",
+        "Updates limited to 4 Hz per sensor to reduce repeated correlated updates; residual dependence remains.",
+        "Prototype must be reviewed on calibration data before calibration/configuration freeze."
+      ]
+    }
+  },
+  "source_sha256": {
+    "feedback_core.py": "09a162c34ef2fac5d51ddceadc550b90879efaebc7874a52f4f9dc10e004bab6",
+    "feedback_runner.py": "ecac83634f6301eef6895f674bd702e114ec732225edf63fc2e3168b39d7b624",
+    "ekf_core.py": "6b8aaa9c068f6614682902a9e60b271afbc379d366666037987c9f704865c7d5",
+    "protocol.json": "2016fa27d08ab6ab12f7b71b21ef8e552634d3fdecd6102fc672ff75f5e93e03",
+    "ekf_config.json": "a092d297d95620fc5bc724d1bd802436b4fbc0145ac2884a81834a8849e7c728"
+  },
+  "camera_geometry": "upright tag; normalized pixel centering; no camera-derived distance",
+  "result": "COMPLETED_EVALUATION",
+  "stop_reason": "RAW_TOF_GUARD",
+  "motion_start_elapsed_s": 9.30709126200054,
+  "stop_elapsed_s": 14.394679316001202,
+  "clock_jump_detected": false,
+  "preview_issue_counts": {},
+  "final_state": {
+    "phase": "SETTLING",
+    "status": "FINISHED",
+    "method": "filtered",
+    "motion_elapsed_s": 6.900491583000985,
+    "reference_x_m": 0.39999999999999997,
+    "reference_v_m_s": 0.0,
+    "reference_a_m_s2": 0.0,
+    "reference_T_s": 4.0,
+    "reference_L_m": 0.39999999999999997,
+    "requested_v_m_s": 0.0,
+    "requested_omega_rad_s": 0.0,
+    "stop_reason": "RAW_TOF_GUARD",
+    "raw_odom_progress_m": 0.34594070096161234,
+    "scaled_tof_travel_m": 0.3175668202764977,
+    "corrected_odom_progress_m": 0.33916659861064147,
+    "filtered_progress_m": 0.3370001664775989,
+    "ekf_state": [
+      0.3370001664775989,
+      -0.0016336756874173522,
+      -0.0250410280517972,
+      -0.0001544872755475058,
+      -6.924319830614987e-06
+    ],
+    "covariance": [
+      [
+        5.5433937059529834e-05,
+        -4.81658225767162e-07,
+        3.3594624264005827e-06,
+        1.1212274898884587e-05,
+        3.067324473244708e-11
+      ],
+      [
+        -4.81658225767162e-07,
+        5.612021619130103e-05,
+        0.00019961278791928618,
+        -2.882322783547999e-07,
+        1.0783838539163155e-09
+      ],
+      [
+        3.3594624264005827e-06,
+        0.00019961278791928618,
+        0.0018968437035937371,
+        -1.0717416167869216e-09,
+        0.00011599233950561036
+      ],
+      [
+        1.1212274898884587e-05,
+        -2.882322783547999e-07,
+        -1.0717416167869216e-09,
+        5.29012109765818e-05,
+        -7.744602636034731e-13
+      ],
+      [
+        3.067324473244708e-11,
+        1.0783838539163155e-09,
+        0.00011599233950561036,
+        -7.744602636034731e-13,
+        0.00047795385263630356
+      ]
+    ],
+    "ekf_counts": {
+      "odom_accepted": 24,
+      "tof_accepted": 25,
+      "rejected": 204
+    }
+  },
+  "closed_utc": "2026-11-09T14:41:07.219859+00:00"
+}

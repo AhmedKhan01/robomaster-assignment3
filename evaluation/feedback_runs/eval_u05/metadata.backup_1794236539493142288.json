@@ -1,0 +1,173 @@
+{
+  "run_id": "eval_u05",
+  "method": "unfiltered",
+  "execute": true,
+  "stage": "evaluation",
+  "evaluation_run": true,
+  "evaluation_ready": true,
+  "frozen_manifest_sha256": "7910a7b96738cbcb9bfd80abfba5f2f09dcf20eb11f2e82df1823e416e169660",
+  "planned_slot": "eval_u05",
+  "attempt": 1,
+  "created_utc": "2026-11-09T15:00:32.228811+00:00",
+  "physical_start_gap_m": 0.6,
+  "physical_final_gap_m": null,
+  "physical_measurement_resolution_m": null,
+  "protocol": {
+    "stage": "frozen_evaluation",
+    "evaluation_ready": true,
+    "calibration_frozen": true,
+    "target_physical_gap_m": 0.2,
+    "kp_per_s": 0.5,
+    "max_speed_m_s": 0.16,
+    "near_tof_m": 0.5,
+    "near_speed_cap_m_s": 0.06,
+    "raw_tof_stop_m": 0.25,
+    "steering_gain_rad_s_per_normalized_error": 0.4,
+    "max_yaw_rate_rad_s": 0.1,
+    "countdown_s": 5.0,
+    "precheck_timeout_s": 20.0,
+    "preview_duration_s": 10.0,
+    "post_reference_timeout_s": 15.0,
+    "settle_s": 1.5,
+    "progress_tolerance_m": 0.005,
+    "static_checks": [
+      {
+        "intended_physical_gap_m": 0.3,
+        "raw_tof_m": 0.306
+      },
+      {
+        "intended_physical_gap_m": 0.25,
+        "raw_tof_m": 0.252
+      },
+      {
+        "intended_physical_gap_m": 0.2,
+        "raw_tof_m": 0.19
+      }
+    ],
+    "guard_note": "Frozen conservative raw-ToF guard after commissioning. Physical reference goal remains 0.20 m; early guard stops and their physical gap errors must be reported.",
+    "steering_note": "Normalized horizontal pixel centering, not calibrated angular bearing. Same steering in both modes.",
+    "evaluation_plan": {
+      "nominal_start_gap_m": 0.6,
+      "valid_runs_per_method": 5,
+      "alternating_order": true
+    }
+  },
+  "ekf_config": {
+    "stage": "frozen_evaluation",
+    "evaluation_ready": true,
+    "calibration_frozen": true,
+    "odometry_bias_m": 0.0067741023509708675,
+    "tof_travel_scale": 0.8970814132104455,
+    "velocity_time_constant_s": 0.25,
+    "yaw_rate_time_constant_s": 0.25,
+    "bias_ramp_s": 2.0,
+    "minimum_update_interval_s": 0.25,
+    "odom_x_variance_m2": 0.000696299788922833,
+    "odom_y_variance_m2": 0.000696299788922833,
+    "tof_variance_m2": 0.0014083195726296031,
+    "velocity_diffusion": 0.02,
+    "yaw_rate_diffusion": 0.06,
+    "initial_state_sd": [
+      0.01,
+      0.01,
+      0.08726646259971647,
+      0.02,
+      0.05
+    ],
+    "provenance": {
+      "calibration_sha256": "e3f4665a9e6a8a3a46588661b5c943f828bd453fec9a16a50c3fbb7b2ca26842",
+      "velocity_proxy_rms_m_s": 0.0019229452543164703,
+      "notes": [
+        "Bias and ToF scale are the five-pilot medians.",
+        "Position R uses four times endpoint residual sample variance; y variance assumed equal to x.",
+        "Endpoint residual spread is a conservative tuning proxy, not uniquely identified per-sample sensor noise.",
+        "Velocity diffusion uses the RMS middle odometry slope minus request across pilots, floored at 0.01 m/s and divided by sqrt(0.25 s).",
+        "Yaw-rate diffusion 0.06 rad/s/sqrt(s), response constants 0.25 s, startup bias ramp 2 s and initial SDs are declared priors.",
+        "Updates limited to 4 Hz per sensor to reduce repeated correlated updates; residual dependence remains.",
+        "Prototype must be reviewed on calibration data before calibration/configuration freeze."
+      ]
+    }
+  },
+  "source_sha256": {
+    "feedback_core.py": "09a162c34ef2fac5d51ddceadc550b90879efaebc7874a52f4f9dc10e004bab6",
+    "feedback_runner.py": "ecac83634f6301eef6895f674bd702e114ec732225edf63fc2e3168b39d7b624",
+    "ekf_core.py": "6b8aaa9c068f6614682902a9e60b271afbc379d366666037987c9f704865c7d5",
+    "protocol.json": "2016fa27d08ab6ab12f7b71b21ef8e552634d3fdecd6102fc672ff75f5e93e03",
+    "ekf_config.json": "a092d297d95620fc5bc724d1bd802436b4fbc0145ac2884a81834a8849e7c728"
+  },
+  "camera_geometry": "upright tag; normalized pixel centering; no camera-derived distance",
+  "result": "COMPLETED_EVALUATION",
+  "stop_reason": "RAW_TOF_GUARD",
+  "motion_start_elapsed_s": 6.35964795000109,
+  "stop_elapsed_s": 11.591054053000335,
+  "clock_jump_detected": false,
+  "preview_issue_counts": {},
+  "final_state": {
+    "phase": "SETTLING",
+    "status": "FINISHED",
+    "method": "unfiltered",
+    "motion_elapsed_s": 7.050782504999006,
+    "reference_x_m": 0.39999999999999997,
+    "reference_v_m_s": 0.0,
+    "reference_a_m_s2": 0.0,
+    "reference_T_s": 4.0,
+    "reference_L_m": 0.39999999999999997,
+    "requested_v_m_s": 0.0,
+    "requested_omega_rad_s": 0.0,
+    "stop_reason": "RAW_TOF_GUARD",
+    "raw_odom_progress_m": 0.3394472106931469,
+    "scaled_tof_travel_m": 0.30500768049155147,
+    "corrected_odom_progress_m": 0.332673108342176,
+    "filtered_progress_m": 0.332804589371057,
+    "ekf_state": [
+      0.332804589371057,
+      -0.002032698141365998,
+      -0.030762493914045397,
+      -0.0001352925273310945,
+      -6.682395619606912e-06
+    ],
+    "covariance": [
+      [
+        6.039920810570959e-05,
+        -6.657716434269601e-07,
+        4.1033987609817045e-06,
+        1.1924544065279497e-05,
+        -3.202069383059234e-11
+      ],
+      [
+        -6.657716434269601e-07,
+        5.856247406323178e-05,
+        0.0002100718972183847,
+        -3.702752610962701e-07,
+        -1.071702363701092e-09
+      ],
+      [
+        4.1033987609817045e-06,
+        0.0002100718972183847,
+        0.0019515619597317048,
+        8.514251790970869e-09,
+        0.00011614248187292396
+      ],
+      [
+        1.1924544065279497e-05,
+        -3.702752610962701e-07,
+        8.514251790970869e-09,
+        5.338607824211823e-05,
+        -3.971327294505898e-13
+      ],
+      [
+        -3.202069383059234e-11,
+        -1.071702363701092e-09,
+        0.00011614248187292396,
+        -3.971327294505898e-13,
+        0.0004810990926599621
+      ]
+    ],
+    "ekf_counts": {
+      "odom_accepted": 24,
+      "tof_accepted": 25,
+      "rejected": 188
+    }
+  },
+  "closed_utc": "2026-11-09T15:00:45.940460+00:00"
+}
