@@ -1,0 +1,45 @@
+{
+  "source": "Physical endpoint measurements confirmed by user in conversation; tape division 1 mm. Recorder metadata originals deliberately preserved.",
+  "runs": [
+    {
+      "run_id": "fast07",
+      "start_gap_m": 1.2,
+      "final_gap_m": 0.81,
+      "resolution_m": 0.001,
+      "notes": [
+        "OpenCV 5 observer; JPEG stream; arm (105,35) mm.",
+        "Clock jump before motion; retained."
+      ]
+    },
+    {
+      "run_id": "slow05",
+      "start_gap_m": 1.2,
+      "final_gap_m": 0.82,
+      "resolution_m": 0.001,
+      "notes": [
+        "One brief driver ODOMETRY_INVALID_OR_STALE zero-command sample during motion; retained."
+      ]
+    },
+    {
+      "run_id": "medium01",
+      "start_gap_m": 1.2,
+      "final_gap_m": 0.803,
+      "resolution_m": 0.001,
+      "notes": []
+    },
+    {
+      "run_id": "short01",
+      "start_gap_m": 1.2,
+      "final_gap_m": 0.908,
+      "resolution_m": 0.001,
+      "notes": []
+    },
+    {
+      "run_id": "long01",
+      "start_gap_m": 1.2,
+      "final_gap_m": 0.7,
+      "resolution_m": 0.001,
+      "notes": []
+    }
+  ]
+}

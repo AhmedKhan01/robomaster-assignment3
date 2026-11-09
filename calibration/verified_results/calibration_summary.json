@@ -1,0 +1,273 @@
+{
+  "stage": "offline_pilot_calibration",
+  "evaluation_ready": false,
+  "pilot_count": 5,
+  "odometry_bias_m": 0.0067741023509708675,
+  "tof_travel_scale": 0.8970814132104455,
+  "bias_estimator": "Median of settled odometry travel minus physical travel; all five pilots retained.",
+  "scale_estimator": "Median of physical travel / raw ToF decrease; all five pilots retained.",
+  "endpoint_policy": "MOTION_START sample for origin/r0; median last 10 odometry and ToF samples at least 1 s after STOP.",
+  "corrected_odometry_endpoint_spread": {
+    "n": 5,
+    "mean": 0.0018552654470236907,
+    "median": 0.0,
+    "sample_sd": 0.013193746519874795,
+    "robust_sd_1p4826_MAD": 0.016822641738488485,
+    "minimum": -0.013927915285577519,
+    "maximum": 0.018587249899378988
+  },
+  "corrected_tof_endpoint_spread": {
+    "n": 5,
+    "mean": -0.006234408602150443,
+    "median": 0.0,
+    "sample_sd": 0.018763792078292724,
+    "robust_sd_1p4826_MAD": 0.024281845161290467,
+    "minimum": -0.03172350230414739,
+    "maximum": 0.016377880184331894
+  },
+  "measurement_resolution_m": 0.001,
+  "corrections": {
+    "odometry": "z_o = x_raw - odometry_bias_m",
+    "tof": "z_T = tof_travel_scale * (r0 - r)"
+  },
+  "limitations": [
+    "Corrections fitted on five calibration pilots, not validated on evaluation data.",
+    "Constant odometry bias is an endpoint approximation; applying it early in a run can create negative corrected progress.",
+    "Endpoint residual spreads include motion-dependent errors and physical measurement error; they are not identified per-sample R.",
+    "Full five-state process Q and measurement R are not determined by endpoint data alone; offline model checks and documented assumptions remain.",
+    "Repeated ToF snapshots are not independent sensor samples; all ToF travel values share their run starting-range error.",
+    "Camera pose and image transport changed before these five pilots; earlier slow02 is excluded from this set.",
+    "slow05 brief driver interruption is retained; fast07 clock jump was before motion.",
+    "1 mm tape division is resolution, not a guarantee of 1 mm accuracy.",
+    "These pilots stop around 0.7-0.9 m. The final approach to 0.20 m and conservative raw ToF guard still require verification."
+  ],
+  "runs": [
+    {
+      "run_id": "fast07",
+      "result": "COMPLETED_TIMED_SEGMENT",
+      "physical_start_gap_m": 1.2,
+      "physical_final_gap_m": 0.81,
+      "measurement_resolution_m": 0.001,
+      "physical_travel_m": 0.3899999999999999,
+      "odometry_travel_m": 0.41536135225034976,
+      "odometry_error_m": 0.025361352250349856,
+      "tof_start_m": 1.273,
+      "tof_final_m": 0.82,
+      "tof_drop_m": 0.45299999999999996,
+      "tof_raw_error_m": 0.06300000000000006,
+      "tof_scale_ratio": 0.8609271523178806,
+      "commanded_speed_m_s": 0.12,
+      "requested_duration_s": 3.333333333,
+      "actual_motion_window_s": 3.350066891000097,
+      "settled_odom_n": 10,
+      "settled_tof_n": 10,
+      "driver_faults_during_motion": [],
+      "tag_status_counts_during_motion": {
+        "TARGET_OK": 34
+      },
+      "clock_jumps": [
+        {
+          "elapsed_s": 1.1742934789999708,
+          "step_s": 0.8267454220335821,
+          "during_motion": false
+        }
+      ],
+      "speed_comparison": {
+        "commanded_speed_m_s": 0.12,
+        "odom_middle_slope_m_s": 0.12235311628219332,
+        "slope_pose_sample_count": 47,
+        "raw_sdk_body_vx": {
+          "n": 60,
+          "mean": 0.10233333333333333,
+          "median": 0.1,
+          "sample_sd": 0.036562770111030846,
+          "robust_sd_1p4826_MAD": 0.014826000000000013,
+          "minimum": -0.0,
+          "maximum": 0.2
+        },
+        "physical_endpoint_average_m_s": 0.11641558592388973
+      },
+      "notes": [
+        "OpenCV 5 observer; JPEG stream; arm (105,35) mm.",
+        "Clock jump before motion; retained."
+      ]
+    },
+    {
+      "run_id": "slow05",
+      "result": "COMPLETED_TIMED_SEGMENT",
+      "physical_start_gap_m": 1.2,
+      "physical_final_gap_m": 0.82,
+      "measurement_resolution_m": 0.001,
+      "physical_travel_m": 0.38,
+      "odometry_travel_m": 0.37284618706539335,
+      "odometry_error_m": -0.0071538129346066515,
+      "tof_start_m": 1.264,
+      "tof_final_m": 0.838,
+      "tof_drop_m": 0.42600000000000005,
+      "tof_raw_error_m": 0.04600000000000004,
+      "tof_scale_ratio": 0.8920187793427229,
+      "commanded_speed_m_s": 0.04,
+      "requested_duration_s": 10.0,
+      "actual_motion_window_s": 10.050080901999536,
+      "settled_odom_n": 10,
+      "settled_tof_n": 10,
+      "driver_faults_during_motion": [
+        {
+          "elapsed_s": 9.626617330000045,
+          "status": "ODOMETRY_INVALID_OR_STALE"
+        }
+      ],
+      "tag_status_counts_during_motion": {
+        "TARGET_OK": 100
+      },
+      "clock_jumps": [],
+      "speed_comparison": {
+        "commanded_speed_m_s": 0.04,
+        "odom_middle_slope_m_s": 0.03645762042068835,
+        "slope_pose_sample_count": 146,
+        "raw_sdk_body_vx": {
+          "n": 158,
+          "mean": -0.0749367088607595,
+          "median": -0.08,
+          "sample_sd": 0.036776945759781125,
+          "robust_sd_1p4826_MAD": 0.029652000000000005,
+          "minimum": -0.14,
+          "maximum": 0.03
+        },
+        "physical_endpoint_average_m_s": 0.03781064089985547
+      },
+      "notes": [
+        "One brief driver ODOMETRY_INVALID_OR_STALE zero-command sample during motion; retained."
+      ]
+    },
+    {
+      "run_id": "medium01",
+      "result": "COMPLETED_TIMED_SEGMENT",
+      "physical_start_gap_m": 1.2,
+      "physical_final_gap_m": 0.803,
+      "measurement_resolution_m": 0.001,
+      "physical_travel_m": 0.3969999999999999,
+      "odometry_travel_m": 0.4037741023509708,
+      "odometry_error_m": 0.0067741023509708675,
+      "tof_start_m": 1.246,
+      "tof_final_m": 0.8234999999999999,
+      "tof_drop_m": 0.4225000000000001,
+      "tof_raw_error_m": 0.02550000000000019,
+      "tof_scale_ratio": 0.9396449704142007,
+      "commanded_speed_m_s": 0.08,
+      "requested_duration_s": 5.0,
+      "actual_motion_window_s": 5.04979352600003,
+      "settled_odom_n": 10,
+      "settled_tof_n": 10,
+      "driver_faults_during_motion": [],
+      "tag_status_counts_during_motion": {
+        "TARGET_OK": 51
+      },
+      "clock_jumps": [],
+      "speed_comparison": {
+        "commanded_speed_m_s": 0.08,
+        "odom_middle_slope_m_s": 0.07960701182704297,
+        "slope_pose_sample_count": 74,
+        "raw_sdk_body_vx": {
+          "n": 84,
+          "mean": 0.07940476190476191,
+          "median": 0.08,
+          "sample_sd": 0.021019279186808217,
+          "robust_sd_1p4826_MAD": 0.014825999999999992,
+          "minimum": 0.01,
+          "maximum": 0.13
+        },
+        "physical_endpoint_average_m_s": 0.07861707571922566
+      },
+      "notes": []
+    },
+    {
+      "run_id": "short01",
+      "result": "COMPLETED_TIMED_SEGMENT",
+      "physical_start_gap_m": 1.2,
+      "physical_final_gap_m": 0.908,
+      "measurement_resolution_m": 0.001,
+      "physical_travel_m": 0.2919999999999999,
+      "odometry_travel_m": 0.31012081875356656,
+      "odometry_error_m": 0.018120818753566637,
+      "tof_start_m": 1.257,
+      "tof_final_m": 0.9315,
+      "tof_drop_m": 0.3254999999999999,
+      "tof_raw_error_m": 0.033499999999999974,
+      "tof_scale_ratio": 0.8970814132104455,
+      "commanded_speed_m_s": 0.08,
+      "requested_duration_s": 3.75,
+      "actual_motion_window_s": 3.799900052999874,
+      "settled_odom_n": 10,
+      "settled_tof_n": 10,
+      "driver_faults_during_motion": [],
+      "tag_status_counts_during_motion": {
+        "TARGET_OK": 38
+      },
+      "clock_jumps": [],
+      "speed_comparison": {
+        "commanded_speed_m_s": 0.08,
+        "odom_middle_slope_m_s": 0.08046656964784697,
+        "slope_pose_sample_count": 51,
+        "raw_sdk_body_vx": {
+          "n": 63,
+          "mean": 0.07174603174603175,
+          "median": 0.07,
+          "sample_sd": 0.02581195537828525,
+          "robust_sd_1p4826_MAD": 0.014826000000000013,
+          "minimum": -0.0,
+          "maximum": 0.12
+        },
+        "physical_endpoint_average_m_s": 0.07684412640523985
+      },
+      "notes": []
+    },
+    {
+      "run_id": "long01",
+      "result": "COMPLETED_TIMED_SEGMENT",
+      "physical_start_gap_m": 1.2,
+      "physical_final_gap_m": 0.7,
+      "measurement_resolution_m": 0.001,
+      "physical_travel_m": 0.5,
+      "odometry_travel_m": 0.5000443785696921,
+      "odometry_error_m": 4.437856969208287e-05,
+      "tof_start_m": 1.228,
+      "tof_final_m": 0.706,
+      "tof_drop_m": 0.522,
+      "tof_raw_error_m": 0.02200000000000002,
+      "tof_scale_ratio": 0.9578544061302682,
+      "commanded_speed_m_s": 0.08,
+      "requested_duration_s": 6.25,
+      "actual_motion_window_s": 6.250188488000276,
+      "settled_odom_n": 10,
+      "settled_tof_n": 10,
+      "driver_faults_during_motion": [],
+      "tag_status_counts_during_motion": {
+        "TARGET_OK": 61
+      },
+      "clock_jumps": [],
+      "speed_comparison": {
+        "commanded_speed_m_s": 0.08,
+        "odom_middle_slope_m_s": 0.0798243412579247,
+        "slope_pose_sample_count": 82,
+        "raw_sdk_body_vx": {
+          "n": 102,
+          "mean": 0.07225490196078431,
+          "median": 0.07,
+          "sample_sd": 0.02133684874452478,
+          "robust_sd_1p4826_MAD": 0.014825999999999992,
+          "minimum": -0.0,
+          "maximum": 0.13
+        },
+        "physical_endpoint_average_m_s": 0.07999758742635506
+      },
+      "notes": []
+    }
+  ],
+  "sensitivity_excluding_driver_interruption": {
+    "n": 4,
+    "odometry_bias_m": 0.012447460552268752,
+    "tof_travel_scale": 0.9183631918123232,
+    "primary_analysis_retains_all_runs": true
+  }
+}

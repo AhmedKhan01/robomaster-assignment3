@@ -1,0 +1,56 @@
+{
+  "run_id": "fast07",
+  "start_gap": 1.2,
+  "speed": 0.12,
+  "duration": 3.333333333,
+  "execute": true,
+  "output_root": "pilot_runs",
+  "stage": "speed_characterization_pilot",
+  "evaluation_run": false,
+  "created_utc": "2026-11-09T11:18:58.770016+00:00",
+  "commanded_nominal_travel_m": 0.39999999996,
+  "physical_start_gap_m": 1.2,
+  "physical_final_gap_m": null,
+  "physical_measurement_resolution_m": null,
+  "camera_geometry": "upright tag; normalized horizontal image error; no camera distance",
+  "guard_raw_tof_m": 0.3,
+  "driver_guard_note": "Existing driver ToF latch and timeout remain independent",
+  "result": "COMPLETED_TIMED_SEGMENT",
+  "stop_reason": "TIMED_SEGMENT_COMPLETE",
+  "motion_start_elapsed_s": 6.331680505999884,
+  "stop_elapsed_s": 9.681747396999981,
+  "duration_s": 11.532057117000022,
+  "last_inputs": {
+    "tof": {
+      "receipt": 3061.867904643,
+      "range": 0.822,
+      "sensor_age": 0.05591049699978612
+    },
+    "odom": {
+      "receipt": 3061.86826218,
+      "position": [
+        0.9408,
+        -0.28772
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        -0.15453795241861723,
+        0.9879868527780424
+      ],
+      "source_stamp": 1794223151.354877
+    },
+    "driver": {
+      "receipt": 3061.866989631,
+      "status": "READY"
+    },
+    "tag": {
+      "receipt": 3061.83038883,
+      "visible": true,
+      "target_id": 3,
+      "error": -0.02387347549367984,
+      "source_stamp": 1794223151.332099
+    }
+  },
+  "closed_utc": "2026-11-09T11:19:11.444676+00:00"
+}

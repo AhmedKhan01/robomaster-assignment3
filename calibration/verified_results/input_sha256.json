@@ -1,0 +1,13 @@
+{
+  "runs/fast07/metadata_original.json": "063ea07c596cc8e8614f0d481f8eb5ecc929442b0f70b9013c9ba555ea3321ac",
+  "runs/fast07/raw_events.csv": "31a59cfc7bff39436f832fcf1a45d560847b4f7b402cf7d5854046a0e236a333",
+  "runs/long01/metadata_original.json": "9f83424e4b860b57b7851bf5060c92fcf2fa1b98d3186fc642756c9a51f33e4b",
+  "runs/long01/raw_events.csv": "dd75717225d8e09487e3d408b2c115e947a2a3d3706bd706169e0f480ee6fe0d",
+  "runs/medium01/metadata_original.json": "f7916aa346e98f2c9446d87eb833b88f1e1e1b8ab5fa557edeaa0c0332b0bde7",
+  "runs/medium01/raw_events.csv": "f6bc196a100f1b9f896edebefb37c51be0a092c95bdd852801277a44ff608245",
+  "runs/short01/metadata_original.json": "53c1cb0fe77d7378dc2d1058796881be77da8f5100a64c4a9e3572f0ba54a90f",
+  "runs/short01/raw_events.csv": "9ee056be783e1311a303377625ca4213d9a3e0d0188bc6a2221b837c51e3d26d",
+  "runs/slow05/metadata_original.json": "def15282e60496f414b53cfce8aae1bc3b62ebeae48c583962a7d9df7a252d32",
+  "runs/slow05/raw_events.csv": "7c18886c78cb76a7a524fed768355f71b299d2f62a076531db50988b9b27517d",
+  "physical_measurements.json": "ae8bc77ec00fc02bd569e7f24723e81d3a9c7fc24ea38e2fc2db0c597b85bfc2"
+}
