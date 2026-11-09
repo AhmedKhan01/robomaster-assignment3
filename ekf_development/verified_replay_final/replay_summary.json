@@ -1,0 +1,65 @@
+{
+  "evaluation_ready": false,
+  "runs": [
+    {
+      "run_id": "fast07",
+      "stage": "in_sample_calibration_replay",
+      "physical_travel_m": 0.3899999999999999,
+      "ekf_settled_m": 0.4116568264234064,
+      "ekf_error_m": 0.021656826423406494,
+      "accepted_odom": 19,
+      "accepted_tof": 19,
+      "skipped_measurements": 153,
+      "r0_sample_spread_variance_m2": 4.780952380952429e-06,
+      "note": "No evaluation evidence. Q/R assumptions remain provisional; delayed updates are applied at receipt, without rewind."
+    },
+    {
+      "run_id": "slow05",
+      "stage": "in_sample_calibration_replay",
+      "physical_travel_m": 0.38,
+      "ekf_settled_m": 0.3763154831800508,
+      "ekf_error_m": -0.0036845168199491907,
+      "accepted_odom": 40,
+      "accepted_tof": 42,
+      "skipped_measurements": 334,
+      "r0_sample_spread_variance_m2": 6.857142857142774e-06,
+      "note": "No evaluation evidence. Q/R assumptions remain provisional; delayed updates are applied at receipt, without rewind."
+    },
+    {
+      "run_id": "medium01",
+      "stage": "in_sample_calibration_replay",
+      "physical_travel_m": 0.3969999999999999,
+      "ekf_settled_m": 0.3989113103738182,
+      "ekf_error_m": 0.001911310373818309,
+      "accepted_odom": 24,
+      "accepted_tof": 25,
+      "skipped_measurements": 198,
+      "r0_sample_spread_variance_m2": 4e-06,
+      "note": "No evaluation evidence. Q/R assumptions remain provisional; delayed updates are applied at receipt, without rewind."
+    },
+    {
+      "run_id": "short01",
+      "stage": "in_sample_calibration_replay",
+      "physical_travel_m": 0.2919999999999999,
+      "ekf_settled_m": 0.30371922241223626,
+      "ekf_error_m": 0.01171922241223633,
+      "accepted_odom": 20,
+      "accepted_tof": 21,
+      "skipped_measurements": 162,
+      "r0_sample_spread_variance_m2": 6.383333333333045e-06,
+      "note": "No evaluation evidence. Q/R assumptions remain provisional; delayed updates are applied at receipt, without rewind."
+    },
+    {
+      "run_id": "long01",
+      "stage": "in_sample_calibration_replay",
+      "physical_travel_m": 0.5,
+      "ekf_settled_m": 0.48995192983207886,
+      "ekf_error_m": -0.010048070167921141,
+      "accepted_odom": 27,
+      "accepted_tof": 29,
+      "skipped_measurements": 218,
+      "r0_sample_spread_variance_m2": 4e-06,
+      "note": "No evaluation evidence. Q/R assumptions remain provisional; delayed updates are applied at receipt, without rewind."
+    }
+  ]
+}

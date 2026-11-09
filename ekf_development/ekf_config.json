@@ -1,0 +1,36 @@
+{
+  "stage": "EKF_PROTOTYPE_PREVIEW_ONLY",
+  "evaluation_ready": false,
+  "calibration_frozen": false,
+  "odometry_bias_m": 0.0067741023509708675,
+  "tof_travel_scale": 0.8970814132104455,
+  "velocity_time_constant_s": 0.25,
+  "yaw_rate_time_constant_s": 0.25,
+  "bias_ramp_s": 2.0,
+  "minimum_update_interval_s": 0.25,
+  "odom_x_variance_m2": 0.000696299788922833,
+  "odom_y_variance_m2": 0.000696299788922833,
+  "tof_variance_m2": 0.0014083195726296031,
+  "velocity_diffusion": 0.02,
+  "yaw_rate_diffusion": 0.06,
+  "initial_state_sd": [
+    0.01,
+    0.01,
+    0.08726646259971647,
+    0.02,
+    0.05
+  ],
+  "provenance": {
+    "calibration_sha256": "e3f4665a9e6a8a3a46588661b5c943f828bd453fec9a16a50c3fbb7b2ca26842",
+    "velocity_proxy_rms_m_s": 0.0019229452543164703,
+    "notes": [
+      "Bias and ToF scale are the five-pilot medians.",
+      "Position R uses four times endpoint residual sample variance; y variance assumed equal to x.",
+      "Endpoint residual spread is a conservative tuning proxy, not uniquely identified per-sample sensor noise.",
+      "Velocity diffusion uses the RMS middle odometry slope minus request across pilots, floored at 0.01 m/s and divided by sqrt(0.25 s).",
+      "Yaw-rate diffusion 0.06 rad/s/sqrt(s), response constants 0.25 s, startup bias ramp 2 s and initial SDs are declared priors.",
+      "Updates limited to 4 Hz per sensor to reduce repeated correlated updates; residual dependence remains.",
+      "Prototype must be reviewed on calibration data before calibration/configuration freeze."
+    ]
+  }
+}
